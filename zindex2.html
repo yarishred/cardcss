@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #333;
+      color: #f3f3f3;
+    }
+
+    h2{
+        text-align: center;
+        line-height: 60px;
+        font-size: 2.5rem;
+        color: transparent;
+        transition: all ease 0.5s;
+    }
+
+    .cont2:hover h2{
+        transition: all ease 0.5s;
+        line-height: 300px;
+        visibility: visible;
+        color: #f3f3f3;
+    }
+
+    .wrapper {
+      width: 500px;
+      height: 500px;
+      border: 2px solid #f3f3f3;
+      margin: auto;
+      margin-top: 20%;
+      position: relative;
+    }
+
+    .cont1{
+        width: 200px;
+        height: 300px;
+        margin: auto;
+        margin-top: 100px;
+        position: relative;
+        background: #333;
+        filter: blur(4px);
+    }
+    .cont2{
+        width: 200px;
+        height: 300px;
+        margin: auto;
+        margin-top: -300px;
+        position: relative;
+        background:#333;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #333, -2px -2px 5px #333 ;
+    }
+
+    .cont2::after{
+        position: absolute;
+        content: '';
+        width: 50%;
+        top:0;
+        border-radius: 5px;
+        height: inherit;
+
+        background: rgba(255, 255, 255, 0.041);
+    }
+
+    .cont1::after {
+        position: absolute;
+        width: 210px;
+        height: 310px;
+        content:"";
+        padding: 10px;
+        top:-16px;
+        left:-16px;
+        background: linear-gradient(-220deg, #fbff01, #fa0000) content-box;
+        z-index: -1;
+        transform: skewX(5deg) skewY(5deg);
+        animation: arcoiris 3s linear infinite;
+    }
+
+    @keyframes arcoiris {
+        0%, 100% {
+            filter: hue-rotate(0deg)
+        }
+
+        50% {
+            filter: hue-rotate(360deg)
+        }
+    }
+
+    .cont1::before {
+        position: absolute;
+        width: 210px;
+        height: 310px;
+        content:"";
+        padding: 10px;
+        top:-16px;
+        left:-16px;
+        background: linear-gradient(-220deg, #fbff01, #fa0000) content-box;-box;
+        z-index: -1;
+        transform: skewX(-5deg) skewY(-5deg);
+        animation: arcoiris 3s linear infinite;
+    }
+
+
+    /* .cont2 {
+      background: gold;
+      left: 120px;
+      z-index: 3;
+    }
+    .cont3 {
+      background: dodgerblue;
+      top: -60px;
+      left: 40%;
+      z-index: 4;
+    }
+    .cont4 {
+      background: seagreen;
+      top: -250px;
+      left: 42%;
+      z-index: 40;
+    }
+
+    .texto {
+      text-align: center;
+    }
+
+    .texto::before {
+      content: "Bienvenidos al grupo de ";
+      background: tomato;
+      color: dodgerblue;
+    }
+
+    .texto::after {
+      content: " SENA ";
+      background: dodgerblue;
+      color: tomato;
+    }
+
+    .cont-after-before {
+      width: 200px;
+      height: 300px;
+      margin: auto;
+      background: rgb(255, 255, 255);
+      opacity: 0.4;
+      position: relative;
+    }
+
+    .cont-after-before::before {
+        width: 30%;
+        height: inherit;
+        content: '';
+        background: rgba(11, 241, 49);
+        position: absolute;
+        z-index: -1;
+    }
+
+    .cont-after-before::after {
+        width: 30%;
+        height: inherit;
+        content: '';
+        background: rgb(4, 199, 248);
+        position: absolute;
+        right:0;
+        z-index: -1;
+    } */
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="cont1"></div>
+      <div class="cont2">
+          <h2>Card</h2>
+      </div>
+
+      <!-- <div class="cont cont2">Contenedor 2</div>
+      <div class="cont cont3">Contenedor 3</div>
+      <div class="cont cont4">Contenedor 4</div> -->
+    </div>
+    <!-- <br /><br /><br />
+    <h1 class="texto">ADSI</h1>
+    <br /><br /><br />
+    <div class="cont-after-before"></div>
+    <br /><br /><br /> -->
+  </body>
+</html>
